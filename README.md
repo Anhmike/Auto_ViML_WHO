@@ -34,3 +34,9 @@ Automated Variant Interpretable Machine Learning project. Created by Ram Seshadr
 Hope this helps. You don't need any special Libraries other than whatever is in your Anaconda Python Distribution. 
 
 Also, BTW, Auto_ViML runs on Python 3 versions without problems. But I suspect it can run on Python 2 as well.
+
+<b>License</b>
+Apache 2.0; see <a href="https://github.com/mbrukman/autogen/blob/master/LICENSE.txt">LICENSE.txt</a> for details.
+
+<b>Disclaimer</b>
+This project is not an official Google project. It is not supported by Google and Google specifically disclaims all warranties as to its quality, merchantability, or fitness for a particular purpose.
