@@ -2,19 +2,60 @@
 # Auto_ViML
 Automated Variant Interpretable Machine Learning project. Created by Ram Seshadri. Permission Granted Upon Request.
 
-    ####   Automatically Build Variant Interpretable Machine Learning Models (Auto_ViML) ######
-    # Auto_ViML was designed for building a High Performance Interpretable Model With Fewest Vars. 
-    ##  The V is for Variant because it tries Multiple Models and Multiple Features to find the
-    #   Best Performing Interpretable Model with the Least Amount of Features for any data set.
-    #####   It is built mostly using Scikit-Learn, Numpy, Pandas and Matplotlib. The only
-    ####  importation you may have to do is "shap" but if you don't have it, it will skip it.
-    ####   Just send in train as a file or a dataframe, similarly a test, a submission file 
-    ###    (if any) and it will build the model. You have a number of Flags to tune the result.
-    It will return a trained model and your submission file will be "mysubmission.csv" file. 
-    So you can take it and submit it to competitions or hackathons right away.
-    If no submission file was given but as long as you give a test file, it will create
-    a submission file for you named "mySubmission.csv". It returns XGB and important_features.
-    It also returns the modified Train and Test files. Great to do more modeling if necessary.
+    #########################################################################################################
+    ####   Automatically Build Variant Interpretable Machine Learning Models (Auto_ViML)               ######
+    #########################################################################################################
+    ####   Auto_ViML was designed for building a High Performance Interpretable Model With Fewest Vars.   ###
+    ####   The "V" in Auto_ViML stands for Variant because it tries Multiple Models and Multiple Features ###
+    ####   to find the Best Performing Model for any data set.The "i" in Auto_ViML stands " Interpretable"###
+    ####   since it selects the fewest Features to build a simpler, more interpretable model. This is key. ##
+    ####   Auto_ViML is built mostly using Scikit-Learn, Numpy, Pandas and Matplotlib. Hence it should run ##
+    ####   on any Python 2 or Python 3 Anaconda installations. You won't have to import any special      ####
+    ####   Libraries other than "SHAP" library for SHAP values which provides more interpretability.    #####
+    ####   But if you don't have it, Auto_ViML will skip it and show you the regular feature importances. ###
+    #########################################################################################################
+    ####   INPUTS:                                                                                        ###
+    #########################################################################################################
+    ####   train: could be a datapath+filename or a dataframe. It will detect which is which and load it.####
+    ####   test: could be a datapath+filename or a dataframe. If you don't have any, just leave it as "". ###  
+    ####   submission: must be a datapath+filename. If you don't have any, just leave it as empty string.#### 
+    ####   target: name of the target variable in the data set.                                          ####
+    ####   sep: if you have a spearator in the file such as "," or "\t" mention it here. Default is ",". ####
+    ####   scoring_parameter: if you want your own scoring parameter such as "f1" give it here. If not, #####
+    ####       it will assume the appropriate scoring param for the problem and it will build the model.#####
+    ####   Boosting Flag: you have 3 possible choices (default is False):                               #####
+    ####    None = This will build a Linear Model                                                       #####
+    ####    False = This will build a Random Forest or Extra Trees model (also known as Bagging)        #####
+    ####    True = This will build an XGBoost model                                                     #####
+    ####   Add_Poly: Default is 0. It has 2 additional settings:                                        #####
+    ####    1 = Add interaction variables only such as x1*x2, x2*x3,...x9*10 etc.                       ##### 
+    ####    2 = Add Interactions and Squared variables such as x1**2, x2**2, etc.                       #####
+    ####   Stacking_Flag: Default is False. If set to True, it will add an additional feature which     #####
+    ####         is derived from predictions of another model. This is used in some cases but may result#####
+    ####         in overfitting. So be careful turning this flag "on".                                  #####
+    ####   Binning_Flag: Default is False. It set to True, it will convert the top numeric variables    #####
+    ####         into binned variables through a technique known as "Entropy" binning. This is very     #####
+    ####         helpful for certain datasets (especially hard to build models).                        #####
+    ####   Imbalanced_Flag: Default is False. If set to True, it will downsample the "Majority Class"   #####
+    ####         in an imbalanced dataset and make the "Rare" class at least 5% of the data set. This   #####
+    ####         the ideal threshold in my mind to make a model learn. Do it for Highly Imbalanced data.#####
+    ####   verbose: This has 3 possible states:                                                         #####
+    ####    0 = limited output. Great for running this silently and getting fast results.               #####
+    ####    1 = more charts. Great for knowing how results were and making changes to flags in input.   #####
+    ####    2 = lots of charts and output. Great for reproducing what Auto_ViML does on your own.       #####
+    #########################################################################################################
+    ####   OUTPUTS:                                                                                     #####
+    #########################################################################################################
+    ####   model: It will return your trained model                                                     #####
+    ####   features: the fewest number of features in your model to make it perform well                #####
+    ####   train_modified: this is the modified train dataframe after removing and adding features      #####
+    ####   test_modified: this is the modified test dataframe with the same transformations as train    #####
+    ####   Finally, it writes your submission file to disk in the current directory called "mysubmission.csv"
+    ####   This submission file is ready for you to show it clients or submit it to competitions.       #####     
+    ####   If no submission file was given but as long as you give it a test file name, it will create  #####
+    ####   a submission file for you named "mySubmission.csv".                                          #####
+    #########################       G  O  O  D    L   U   C   K!                   ##########################
+    #########################################################################################################
 
 # Steps:
 1. Copy or download this Auto_ViML.py file to any directory. 
