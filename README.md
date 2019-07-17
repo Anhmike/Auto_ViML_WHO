@@ -54,6 +54,17 @@ Automated Variant Interpretable Machine Learning project. Created by Ram Seshadr
     ####   This submission file is ready for you to show it clients or submit it to competitions.       #####     
     ####   If no submission file was given but as long as you give it a test file name, it will create  #####
     ####   a submission file for you named "mySubmission.csv".                                          #####
+    #################               A D D I T I O N A L    N O T E S                              ###########
+    ####   Auto_ViML works on any Multi-Class, Multi-Label Data Set. So you can have many labels.       #####  
+    ####   Scoring Metric Suggestions:                                                                  #####
+    ####   If you have Binary Class and Multi-Class in a Single Label, Choose Accuracy. It will        ######
+    ####   do very well. If you want something better, try roc_auc even for Multi-Class which works.   ######
+    ####   You can try F1 or Weighted F1 if you want something complex or for Multi-Class.             ######
+    ####   Note that For Imbalanced Classes (<=5% classes), it automatically adds Class Weights.       ######
+    ####   Also, Note that it handles Multi-Label automatically so you can send Train data             ######
+    ####   with multiple Labels (Targets) and it will automatically predict for each Label.            ######
+    ####   Finally this is Meant to Be a Fast Algorithm, so use it for just quick POCs                 ######
+    ####   This is Not Meant for Production Problems. It produces great models but may not be Perfect! ######
     #########################       G  O  O  D    L   U   C   K!                   ##########################
     #########################################################################################################
 
