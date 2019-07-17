@@ -1,6 +1,7 @@
 ############# This is not an Officially Supported Google Product! #########################################
-# Auto_ViML
-Automated Variant Interpretable Machine Learning project: Build Multiple, Interpretable, ML Models Fast!
+# Auto_ViML_WHO
+   Automated Variant Interpretable Machine Learning project with Hyper Opt (WHO).
+   Build Multiple, Interpretable, ML Models Fast. Now using Hyper Opt.
 
     #########################################################################################################
     #Copyright 2019 Google LLC                                                                        #######
