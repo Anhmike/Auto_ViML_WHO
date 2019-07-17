@@ -1,9 +1,10 @@
 ############# This is not an Officially Supported Google Product! #########################################
 # Auto_ViML
-Automated Variant Interpretable Machine Learning project. Created by Ram Seshadri. Permission Granted Upon Request.
+Automated Variant Interpretable Machine Learning project: Build Multiple, Interpretable, ML Models Fast!
 
     #########################################################################################################
-    ####   Automatically Build Variant Interpretable Machine Learning Models (Auto_ViML)               ######
+    ####       Automatically Build Variant Interpretable Machine Learning Models (Auto_ViML)           ######
+    ####                                Developed by Ramadurai Seshadri                                ######
     #########################################################################################################
     ####   Auto_ViML was designed for building a High Performance Interpretable Model With Fewest Vars.   ###
     ####   The "V" in Auto_ViML stands for Variant because it tries Multiple Models and Multiple Features ###
